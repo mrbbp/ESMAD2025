@@ -1,14 +1,14 @@
-# Processing - faire ses outils
+# Processing - faire ses outils | crafting tools
 
 Created: 26 septembre 2023 18:07
 
-# les trucs à connaitre
+# les trucs à connaitre | things to know
 
-## Lancer la lecture
+## Lancer la lecture | Run Sketch
 
 `Command + R`
 
-## Taille de la fenêtre
+## Taille de la fenêtre | Sizing sketch
 
 ```java
 size(600,600);
@@ -24,7 +24,7 @@ fullscreen(1); // l'écran principal
 fullscreen(2,P2D);  // sur le deuxième écran avec moteur P2D
 ```
 
-## Utiliser la souris
+## Utiliser la souris | using mouse
 
 ```java
 //mouseX , mouseY
@@ -42,7 +42,7 @@ void mousePressed() {
 }
 ```
 
-## Déclencher des événements avec le clavier
+## Déclencher des événements avec le clavier | using keyboard
 
 ```java
 void keyReleased() {
@@ -52,7 +52,7 @@ void keyReleased() {
 }
 ```
 
-## Importer une image
+## Importer une image | importing pictures
 
 ```java
 PImage img;
@@ -63,7 +63,7 @@ image(img,0,0);
 
 ```
 
-## Copier une portion d’image
+## Copier une portion d’image | copying part of picture
 
 ```java
 PImage img, imgF;
@@ -72,7 +72,7 @@ imgF = createImage(img.width,img.height,RGB);
 copy(img,dx,dy,dwith,dheight,fx,fy,fwidth,fheight);
 ```
 
-## Importer un svg
+## Importer un svg | importing svg
 
 ```java
 PShape motif;
@@ -82,7 +82,7 @@ shape(motif, width/2, height/2);
 // shape(motif, width/2, height/2, largeur, hauteur);
 ```
 
-## Colorer les tracés d’un svg
+## Colorer les tracés d’un svg | coloring svg shape
 
 ```java
 PShape motif;
@@ -93,7 +93,7 @@ shape(motif, width/2, height/2);
 fill(200,0,0);**
 ```
 
-## Importer plusieurs documents dans une table (Array)
+## Importer plusieurs documents dans une table (Array) | importing object in an array
 
 ```java
 PShape[] motif = new PShape[2];
@@ -104,17 +104,17 @@ shapeMode(CENTER);
 shape(motif[floor(random(2))], width/2,height/2);
 ```
 
-## Enregistrer une image
+## Enregistrer une image | saving Images
 
 ### Enregistrer un **png / jpg**
 
 `save("nom.ext")`
 
-### Enregister une suite d’images (png / jpg)
+### Enregister une suite d’images (png / jpg) | saving images in sequence
 
 `saveFrame("nom###.png")`
 
-### Enregistrer un **pdf**
+### Enregistrer un **pdf** | saving in pdf
 
 ```java
 import processing.pdf.*;
@@ -150,7 +150,7 @@ void keyReleased() {
 
 [PDF Export / Libraries](https://processing.org/reference/libraries/pdf/index.html)
 
-### Enregistrer une animation en pdf
+### Enregistrer une animation en pdf | saving animation in pdf
 
 ```java
 import processing.pdf.*;
@@ -160,7 +160,7 @@ beginRecord(PDF, "frame-####.pdf");
 endRecord();
 ```
 
-### Dessiner dans un pdf
+### Dessiner dans un pdf | drawing in pdf
 
 ```java
 import processing.pdf.*;
@@ -168,7 +168,7 @@ import processing.pdf.*;
 PGraphics pdf = createGraphics(300, 300, PDF, "output.pdf");
 ```
 
-### Enregistrer en **svg**
+### Enregistrer en **svg**  saving in svg
 
 ```java
 import processing.svg.*;
@@ -180,7 +180,7 @@ endRecord();
 
 [SVG Export / Libraries](https://processing.org/reference/libraries/svg/index.html)
 
-## Tourner une forme / une image
+## Tourner une forme / une image | rotating picture / shape
 
 ```java
 rectMode(CENTER);
@@ -191,7 +191,7 @@ pushMatrix(); // mémorise la position
 popMatrix(); // revient à la position initiale
 ```
 
-## Remapper une valeur (changer l’échelle de la valeur)
+## Remapper une valeur (changer l’échelle de la valeur) | remapping value
 
 On peut modifier simplement les plages de valeur d’une donnée en entrée, pour une autre plage de valeur en sortie.
 
@@ -207,7 +207,7 @@ int resultat = int(map(valeur, inMin, inMax, outMin,outMax));
 
 </aside>
 
-## Midi via midibus (Hervé BI)
+## Midi via midibus (Hervé BI) 
 
 ```java
 import themidibus.*; //Importe la bibliothèque
@@ -245,7 +245,7 @@ void controllerChange(int canal, int numero, int valeur) {
 */
 ```
 
-## Usage de Robert en midi
+## Usage de Robert en midi | using midi boxes
 
 ```java
 /*
